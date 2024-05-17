@@ -1,0 +1,2 @@
+# hamzajaffer-Advanced-Mobile-Product-Analysis-and-Interactive-Chatbot-System
+● Web Scraping: ○ Objective: Extract mobile product data from daraz.pk, from the first five pages.    ● Database Integration: Create a structured storage system for the scraped data.     3. Chatbot Development: Develop a chatbot that can handle user queries based on the scraped data. 4. Dashboard Development: Create a dashboard to visually present.
