@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mobile Phone Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-image: url('{{ url_for('static', filename='proj2.png') }}'); /* Update the filename here */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a dark background for readability */
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Mobile Phone Chatbot</h1>
+        <form method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="user_query" placeholder="Enter your budget in PKR or ask for phone ratings">
+            </div>
+            <button type="submit" class="btn btn-light">Search</button>
+        </form>
+        {% if result %}
+            <div>{{ result|safe }}</div>
+        {% endif %}
+        {% if response %}
+            <div>{{ response|safe }}</div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
